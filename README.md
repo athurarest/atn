@@ -11,4 +11,4 @@ It helps me to:
 * Practice version control using Git and GitHub.
 
 ---
-*Follow my journey as I build and learn more!* 💻✨
+*AungThuraNaing* 💻✨
