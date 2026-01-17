@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html lang="my">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
-    <style>
-        /* For slow motion for every click */
-        html {
-            scroll-behavior: smooth;
-        }
+<html>
+    <head>
+        <title>HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+        <!--Basic Structure & Elements-->
+        <h1>Birth of HTML</h1>
+        <p>HTML by Tim Berners-Lee in 1991</p>
+        <ul>
+            <li>Web Browser</li>
+            <li>HTTP Server</li>
+        </ul>
+        <p>Associated tech with HTML</p>
+        <ol>
+            <li>HTTP</li>
+            <li>CSS</li>
+        </ol>
 
-        /* Menu Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #333;
-            padding: 15px 0;
-            text-align: center;
-            z-index: 1000;
-        }
+        <!--Image Adding-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/330px-Tux.svg.png" alt="Cover"> <br>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 18px;
-        }
+        <!--Link Adding-->
+        <a href="https://www.google.com/" title="Search">Google</a>
 
-        nav a:hover {
-            color: #ffcc00;
-        }
+        <!--Refer link and Content-->
+        <h2 id="ch2">Chapter Two</h2>
+        <a href="#ch2" title="Go to Chapter Two">Chapter Two</a>
+        <p></p><br>
 
-        /*  Design for each section */
-        section {
-            height: 100vh; /* Full Scereen */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        
-    </style>
-</head>
-<body>
+        <a href="https://en.wikipedia.org/wiki/HTML">HTML</a><br>
+        <a href="https://en.wikipedia.org/wiki/HTML#Elements">Elements</a>
+        <p></p><br>
 
-    <nav>
-        <a href="section1.html">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-    </nav>
+        <!--Table Creating-->
+        <table border="1" width="30%">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+                <td>23</td>
+            </tr>
+        </table>
+        <p></p><br>
 
-</body>
+        <!--Table Creating2-->
+        <table border="1" width="30%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Alice</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bob</td>
+                    <td>23</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2" align="center">Total</th>
+                    <td>2</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p></p><br>
+
+        <!--Form Elements-->
+        <label for="name">Your Name</label>
+        <input type="text" id="name"><br>
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd"><br>
+        <input type="submit" value="Login">
+    </body>
 </html>
