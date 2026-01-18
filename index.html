@@ -159,3 +159,88 @@
     margin-top: 10px;
   }
 </style>
+
+<div class="secure-access-section">
+  <button id="accessBtn" class="revolutionary-btn">ENTER THE PORTAL</button>
+  <div id="passwordField" class="password-box" style="display: none;">
+    <input type="password" id="passInput" placeholder="Enter the password...">
+    <button onclick="checkPassword()" class="submit-btn">PROCEED</button>
+    <p id="errorMessage" class="error-text"></p>
+  </div>
+</div>
+
+<script>
+  const accessBtn = document.getElementById('accessBtn');
+  const passwordField = document.getElementById('passwordField');
+  const passInput = document.getElementById('passInput');
+  const errorMsg = document.getElementById('errorMessage');
+
+  // Show password field when button is clicked
+  accessBtn.addEventListener('click', () => {
+    passwordField.style.display = 'block';
+    accessBtn.style.display = 'none';
+  });
+
+  function checkPassword() {
+    const secret = "cmnpla611";
+    // Website Link
+    const destination = "secret.html"; 
+
+    if (passInput.value === secret) {
+      window.location.href = destination;
+    } else {
+      errorMsg.innerText = "ACCESS DENIED: Incorrect Credentials.";
+      passInput.value = "";
+    }
+  }
+</script>
+
+<style>
+  .secure-access-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 50px;
+  }
+  .revolutionary-btn {
+    background-color: #f85149; /* Red */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 15px rgba(248, 81, 73, 0.4);
+  }
+  .revolutionary-btn:hover {
+    background-color: #da3633;
+    box-shadow: 0 0 25px rgba(248, 81, 73, 0.6);
+  }
+  .password-box {
+    margin-top: 20px;
+  }
+  #passInput {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    outline: none;
+  }
+  .submit-btn {
+    background: #238636; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .error-text {
+    color: #f85149;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-family: monospace;
+  }
+</style>
